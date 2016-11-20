@@ -1,9 +1,27 @@
-﻿/// <binding AfterBuild='dev' />
-/// YOUTUBE https://www.youtube.com/watch?v=JMkMTt2-pm0
-/*
-This file in the main entry point for defining grunt tasks and using grunt plugins.
-Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409
-*/
+﻿/// YOUTUBE https://www.youtube.com/watch?v=JMkMTt2-pm0
+
+https://www.youtube.com/watch?v=JMkMTt2-pm0
+/****************************************************
+    Steps to use Grunt: Grunt does things like concatinating js and css files, minimises
+
+--Install node.js (https://nodejs.org) - javascript runtime, npm (node package manager) is installed aswell which lets you insyall other packages which work with node
+--Install grunt-cli : Do this by npm install -g grunt-cli (any path in cmd, the -g means global)
+--Create package.json - This will be installed in every project this is node thing not a grunt thing, it has all the dependencies, to create this, CD in cmd to your root project directory and type 'npm init', type in the various options, only name (dont use grunt!),version, desc essential
+--Install grunt - npm install grunt --save-dev (in cmd project root level again), will update package.json with dependency, this also adds the node_modules folder (do not touch this)
+--Install plugins
+--Create gruntfile.js file - right click in VS project > add new Item > Grunt configuration file
+
+To uglify (minimise): npm install grunt-contrib-uglify --save-dev (cmd project root) this will update package.json,then in gruntfile add task and grunt.loadNpmTasks('grunt-contrib-uglify'); at the end
+
+Example for watch:
+    https://www.npmjs.com/package/grunt-contrib-watch
+npm install grunt-contrib-watch --save-dev
+grunt.loadNpmTasks('grunt-contrib-watch');
+
+    Sass:
+npm install grunt-sass --save-dev
+********************************************************/
+
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
